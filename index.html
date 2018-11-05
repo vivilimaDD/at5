@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Atividade 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    * {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(171, 238, 250);
+    font-family: 'Segoe UI';
+}
+
+.menures{
+    height: auto;
+    width: 115px;
+    position: fixed;
+    background-color: rgb(12, 169, 197);
+    text-align: left;
+    height: 100%;
+    top:0;
+
+    transition: transform .2s;
+}
+
+.menures ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.menures ul li a{
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: all .8s;
+}
+
+.menures ul li a:hover {
+    font-weight: bold;
+    background-color: rgb(9, 108, 126);
+}
+
+#container {
+    padding-left: 110px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#container .cabecalho h1{
+    padding-bottom: 10px;
+}
+
+#container .cabecalho #botao {
+    display: none;
+}
+
+#accordeon {
+    width: 80%;
+}
+
+#accordeon > ul > li > div {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+#accordeon ul li.active div{
+    max-height: 1000px;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+#accordeon ul li.active a{
+    border-radius: 5px 5px 0 0;
+}
+
+#accordeon ul {
+    list-style: none;
+}
+
+#accordeon ul li {
+    padding: 4px 0;
+}
+
+#accordeon ul li a {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(12, 169, 197);
+    display: block;
+    cursor: pointer;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 11px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#accordeon ul li a:hover {
+    background-color: white;
+    font-weight: inherit;
+    color: #000;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #container {
+        padding: 0 10px;
+    }
+    
+    #container .cabecalho #botao {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        display: inline-block;
+        color: #ccc;
+        text-shadow: 1px 1px 3px #000;
+        box-shadow: 2px 2px 4px #ccc;
+        background-color: #eee;
+        padding: 5px 10px;
+        margin-right: 5px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    .menures {
+        transform: translateX(-110px);
+    }
+
+    #accordeon {
+        width: 100%
+    }
+
+}
+</style>
+<body>
+    <nav class="menures">
+        <ul>
+        </br>
+    </br>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tutoriais</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Contatos</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <header class="cabecalho">
+            <h1><div id="botao"><img src="icone.png"></div>
+                Mais um Bloguinho
+            </h1>
+        </header>
+    <div id="accordeon">
+        <ul>
+            <li class="active">
+                <a>Home</a>
+                <div style="background-color: white">
+                    A página inicial do bloguinho contem coisas sem nexo apenas para complementar esta caixa de texto aleatoriamente sem um objetivo definido, pois é para isso que serve coisas aleatórias, para completar e testar as funções de um sistema sem um senso comum normal de um ser humano e eu já estou sem ideias para escrever aqui, então é isso mesmo, valeu, até o próximo bloguinho. xau!
+                </div>
+            </li>
+            <li>
+                <a>Tutoriais</a>
+                <div style="background-color: white">
+                        A palavra tutorial é derivada da palavra tutor visto que o seu objectivo é ensinar. Tutoriais são muito comuns na informática, onde são usados para ensinar como programas funcionam, e como podem ser operados por usuários iniciantes. Ou ainda, um programa ou texto, contendo ou não imagens, que ensinam didaticamente, como um aplicativo funciona. A palavra vem do latim tutus (proteger). Os tutoriais "protegem" o usuário das armadilhas do programa, ou resguardam a integridade do computador das investidas dos usuários mais afoitos. O tutorial também pode ser entendido como um "Manual de instruções" ou ainda como um "passo-a-passo" para que um usuário, através de explicações mais simplificadas, chegue ao resultado que se espera dele. A escrita está na maioria das vezes no modo imperativo.
+                </div>
+            </li>
+            <li>
+                <a>Downloads</a>
+                <div style="background-color: white">
+                    Em tecnologia, download e upload, em português descarregamento/transferência e carregamento (substantivos) ou, descarregar/transferir e carregar (verbos),[1] são termos, no âmbito da comunicação em redes de computadores, utilizados para referenciar a transmissão de dados de um dispositivo para outro através de um canal de comunicação previamente estabelecido.[2]
+O uso mais comum do termo download está relacionado com a obtenção de conteúdo da Internet, onde um servidor remoto hospeda dados que são acessados pelos clientes através de aplicativos específicos que se comunicam com o servidor através de protocolos preestabelecidos, como é o caso dos navegadores que acessam os dados de um servidor normalmente utilizando o protocolo HTTP. De forma análoga, o termo upload faz referência à operação inversa a do download, isto é, ao envio de conteúdo à Internet.[2]
+                </div>
+            </li>
+            <li>
+                <a>Eventos</a>
+                <div style="background-color: white">
+                        Sinônimo de evento
+   
+                        26 sinônimos de evento para 3 sentidos da palavra evento:
+                        
+                        Acontecimento:
+                        1 acontecimento, episódio, fenômeno, lance, ocorrência, caso, fato, lanço, sucedido, sucesso.
+                        
+                        Eventualidade:
+                        2 acaso, azar, acidente, casualidade, contingência, eventualidade, imprevisto, incidente, jogada, possibilidade, vicissitude.
+                        
+                        Acontecimento social:
+                        3 cerimônia, comemoração, espetáculo, festa, solenidade
+                </div>
+            </li>
+            <li>
+                <a>Contatos</a>
+                <div style="background-color: white">
+                    Para mais informações, escolha o canal de comunicação adequado para a solução de suas demandas:
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+    
+</body>
+<script>
+let botao = document.getElementById("botao");
+let menu = document.getElementsByClassName("menures")[0];
+let container = document.getElementById("container");
+
+let flag = false;
+
+botao.onclick = function(){
+    if (!flag) {
+        menu.style.transform = "translateX(0px)";
+        container.style.paddingLeft = "110px"
+    }else{
+        menu.style.transform = "translateX(-110px)";
+        container.style.paddingLeft = "0"
+    }
+
+    flag = !flag;
+};
+
+window.onresize = function(){
+    if(window.innerWidth > 480){
+      menu.style = "";
+      container.style = "";
+    }
+};    
+
+let accordeonLinks = document.querySelectorAll("#accordeon ul li a");
+let accordeonLi = document.querySelectorAll("#accordeon ul li");
+let testes = document.querySelectorAll("menures ul li a");
+let show = function(event){
+    let li = event.target.parentElement;
+    event.target.style.borderRadius = "5px 5px 0 0"
+    if(li.className == "active"){
+        li.className = "";
+        event.target.style = "";
+        return;
+    }
+    for (let i = 0, accordeonLinksLength = accordeonLinks.length; i<accordeonLinksLength; i++) {
+        accordeonLinks[i].style = "";
+    };
+
+    for(let i=0, accordeonLiLength = accordeonLi.length; i<accordeonLiLength; i++){
+        accordeonLi[i].className = "";
+    }
+
+    li.className = "active";
+};
+
+for (let i = 0, accordeonLinksLength = accordeonLinks.length; i<accordeonLinksLength; i++) {
+    accordeonLinks[i].onclick = show;
+};
+
+
+</script>
+</html>
